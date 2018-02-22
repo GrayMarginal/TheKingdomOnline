@@ -2,7 +2,7 @@
 <html lang="ru" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="UTF-8"/>
-		<link rel="stylesheet" href="..stylesheets/index-style.css"/>
+		<link rel="stylesheet" href="index-style.css"/>
 		<title>The kingdom online</title>
 	</head>
 	<body>
@@ -16,6 +16,14 @@
 						<td>Первый и единственный в России!</td>
 						<td>Уже <span th:text="${score_users}"></span> пользователей!</td>
 						<td>Учись с удовольствием!</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<form action="/signin" method="post">
+								<input type="submit" value="Войти"/>
+							</form>
+						</td>
 					</tr>
 				</table>
 			</div>

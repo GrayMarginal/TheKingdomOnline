@@ -23,9 +23,13 @@ public class AuthorizationController {
         if(req.getParameter("email")!=null && req.getParameter("password")!=null){
             //User user = new User(req.getParameter("email"), req.getParameter(req.getParameter("password")));
             User user = userRepository.findByEmail(req.getParameter("email"));
-            if(user.getPassword().equals(req.getParameter("password"))){
-                model.addAttribute("result", "true");
-            }else{
+            if(user!=null) {
+                if (user.getPassword().equals(req.getParameter("password"))) {
+                    model.addAttribute("result", "true");
+                } else {
+                    model.addAttribute("result", "false");
+                }
+            }else {
                 model.addAttribute("result", "false");
             }
         }
