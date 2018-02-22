@@ -8,10 +8,11 @@
  <table align="center">
   <tr>
  <td>
-   <form class="content" action="/signin" method="POST">
+  <form class="content" action="/signin" method="POST">
   <p>Email: <input type="email" name="email" required="required" autofocus="autofocus" /></p>
-  <p>Пароль: <input type="password" name="password"/></p>
+  <p>Пароль: <input type="password" name="password" required="required" /></p>
   <p><button type="submit">Войти</button></p>
+   <p><button type="submit" formaction="/registration">Регистрация</button></p>
  </form>
  </td>
   </tr>
