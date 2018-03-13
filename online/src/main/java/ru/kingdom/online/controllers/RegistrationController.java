@@ -23,7 +23,7 @@ public class RegistrationController {
             if(user==null){
                 user = new User(email, pass);
                 userRepository.save(user);
-                return "pages\\registration";
+                return "/";
             }else {
                 model.addAttribute("status", "Такой пользователь уже зарегистрирован!");
             }

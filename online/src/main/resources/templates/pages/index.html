@@ -2,7 +2,7 @@
 <html lang="ru" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="UTF-8"/>
-		<link rel="stylesheet" href="index-style.css"/>
+		<link rel="stylesheet" type="text/css" href="../stylesheets/index-style.css"/>
 		<title>The kingdom online</title>
 	</head>
 	<body>
@@ -11,7 +11,7 @@
 				<h1 align="center"><b>Добро пожаловать в Королевство онлайн!</b></h1>
 			</header>
 			<div class="content">
-				<table class="content-table" align="center" cellspacing="30%" cellpadding="5%">
+				<table class="content-table" align="center" cellspacing="30%" cellpadding="5%" style="text-align:center;">
 					<tr>
 						<td>Первый и единственный в России!</td>
 						<td>Уже <span th:text="${score_users}"></span> пользователей!</td>
@@ -20,9 +20,15 @@
 					<tr>
 						<td></td>
 						<td>
-							<form action="/signin" method="post">
+							<!--<form action="/signin" method="post">
+								<button type="submit" style="background-image:none; background-color:transparent;">
+									<img src="../images/start-game-button-clear.png"/>
+								</button>
 								<input type="submit" value="Войти"/>
-							</form>
+							</form>-->
+							<a href="#login">
+								<img src="../images/start-game-button-clear.png" width="100%"/>
+							</a>
 						</td>
 					</tr>
 				</table>
@@ -30,6 +36,23 @@
 			<footer>
 				
 			</footer>
+		</div>
+		<div id="login">
+			<table align="center" style="padding:20%;">
+				<tbody><tr>
+					<td>
+						<form class="content" action="/signin" method="POST">
+							<p>Email: <input name="email" required="required" autofocus="autofocus" type="email" /></p>
+							<p>Пароль: <input name="password" required="required" type="password" /></p>
+							<p><button type="submit">Войти</button></p>
+						</form>
+						<form action="/registration" method="post">
+							<p><button type="submit" formaction="/registration">Регистрация</button></p>
+						</form>
+					</td>
+				</tr>
+				</tbody>
+			</table>
 		</div>
 	</body>
 </html>
