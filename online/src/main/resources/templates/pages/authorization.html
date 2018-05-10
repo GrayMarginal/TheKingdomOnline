@@ -2,23 +2,36 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
  <head>
   <meta charset="utf-8"/>
-  <title>Вход</title>
+  <title>Регистрация</title>
+     <link rel="stylesheet" type="text/css" href="../stylesheets/index-style.css"/"/>
  </head>
  <body>
- <table align="center">
+     <header>
+         <h1 class="header-text" align="center"><img class ="crown-image-left" src="../images/crown.png"  /><a href="index.html"><img src="../images/header-text.png" alt="Королевство Онлайн" width="50%" /></a><img class ="crown-image-right" src="images/crown.png" /></h1>
+			</header>
+ <table class="authorization-table" align="center">
   <tr>
  <td>
-  <form class="content" action="/signin" method="POST">
-  <p>Email: <input type="email" name="email" required="required" autofocus="autofocus" /></p>
-  <p>Пароль: <input type="password" name="password" required="required" /></p>
-  <p><button type="submit">Войти</button></p>
+  <form class="authorization-form" action="/signin" method="POST" style="padding-top: 20%; height: 50%">
+    <table align="center">
+        <tr>
+  <td>Email: </td>
+<td><input type="email" name="email" required="required" autofocus="autofocus" /></td>
+        </tr>
+        <tr><td>Пароль:</td>
+            <td><input type="password" name="password" required="required"/></td>
+        </tr>
+        </table>
+  <input type="image" src="../images/sign-in-button-clean.png" alt="Войти" width="80%" style="margin-left: 6%"/>
+        
  </form>
-  <form action="/registration" method="post">
-   <p><button type="submit" formaction="/registration">Регистрация</button></p>
-  </form>
+     <p align="center" style="height: 300px"><a href="registration.html"><img src="../images/reg-button-clean.png" width="80%" /></a></p>
  </td>
   </tr>
  </table>
  <p th:text="${result}"></p>
+     <footer>
+				<p align="center">The Kingdom Online Corp 2018</p>
+			</footer>
  </body>
 </html>

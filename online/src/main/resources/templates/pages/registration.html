@@ -1,21 +1,30 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8"/>
-    <title>Регистрация</title>
-</head>
-<body>
-<table align="center">
-    <tr>
-        <td>
-            <form class="content" action="/registration" method="POST">
-                <p th:text="${status}"></p>
-                <p>Email: <input type="email" name="email" required="required" autofocus="autofocus" /></p>
-                <p>Пароль: <input type="password" name="password" /></p>
-                <p><button type="submit">Зарегистрироваться</button></p>
-            </form>
-        </td>
-    </tr>
-</table>
-</body>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+ <head>
+  <meta charset="utf-8"/>
+  <title>Авторизация</title>
+     <link rel="stylesheet" type="text/css" href="../stylesheets/index-style.css"/"/>
+ </head>
+ <body>
+     <header>
+				<h1 class="header-text" align="center">
+				<img class="crown-image-left" src="../images/crown.png" width="100" />
+				<b>Королевство Онлайн</b>
+				<img class="crown-image-right" src="../images/crown.png" width="100" /></h1>
+			</header>
+ <table align="center" >
+  <tr>
+ <td>
+  <form class="registration-form" action="/signin" method="POST" style="padding-top: 20%; height: 500px">
+  <p style="margin-left: 4.1%">Email: <input type="email" name="email" required="required" autofocus="autofocus" /></p>
+  <p style="">Пароль: <input type="password" name="password" required="required"/></p>
+  <input type="image" src="../images/reg-button-clean2.png" alt="Зарегестрироваться" width="80%"/>
+ </form>
+  </tr>
+ </table>
+ <p th:text="${result}"></p>
+     <footer>
+				<p align="center">The Kingdom Online Corp 2018</p>
+			</footer>
+ </body>
 </html>

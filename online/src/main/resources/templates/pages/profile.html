@@ -3,9 +3,38 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Профиль</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/index-style.css"/"/>
 </head>
 <body>
-<p align="center" th:inline="text">Ваш ID: [[${id}]]</p>
-<p align="center" th:inline="text">Ваш Email: [[${email}]]</p>
+<header>
+    
+</header>
+<div class="content" style="">
+    <ul style="text-align: center">
+    <ol style="background-color: lightgray; padding:1%">
+    Основное    
+    </ol>   
+    <ol>
+    Прогресс и статистика
+    </ol>
+    </ul>
+    <div style="width: 80%; margin-left: auto; margin-right: auto; text-align: center;">
+        <div class ="profile-left"><img src="../images/avatar.jpg" alt="Аватар" width="25%"></div>
+        <div class ="profile-right" >
+            <p><b>Коновалова Светлана</b></p>
+        <p><b>Email:</b> sweetochka1997@gmail.com</p>
+        <p><b>Пройдено:</b> 5%</p>
+            </div>
+        <div style="text-align: center; width:80%; margin-left: 15%; padding-bottom:350px">
+            <form action="/signin" method="POST" >
+  <p style="margin-left: 1.5%">Новый пароль: <input type="email" name="email" required="required" autofocus="autofocus" /></p>
+  <p style="">Подтверждение: <input type="password" name="password" required="required"/></p>
+        <p align="right" style="width:50%"><input type="submit" value="Сменить"/></p>
+            </form>
+        </div>
+            <footer>
+				<p align="center">The Kingdom Online Corp 2018</p>
+			</footer>
+</div>
 </body>
 </html>

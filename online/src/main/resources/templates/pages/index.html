@@ -2,57 +2,30 @@
 <html lang="ru" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="UTF-8"/>
-		<link rel="stylesheet" type="text/css" href="../stylesheets/index-style.css"/>
+		<link rel="stylesheet" type="text/css" href="../stylesheets/index-style.css"/"/>
 		<title>The kingdom online</title>
 	</head>
 	<body>
 		<div class="main-container">
 			<header>
-				<h1 align="center"><b>Добро пожаловать в Королевство онлайн!</b></h1>
+				<h1 class="header-text" align="center" ><img src="../images/index-header-text.png" alt="Добро пожаловать в Королевство Онлайн" width="80%"/></h1>
 			</header>
 			<div class="content">
-				<table class="content-table" align="center" cellspacing="30%" cellpadding="5%" style="text-align:center;">
+				<table class="content-table" align="center" cellspacing="100%" width="80%" style="text-align:center;">
 					<tr>
-						<td>Первый и единственный в России!</td>
-						<td>Уже <span th:text="${score_users}"></span> пользователей!</td>
-						<td>Учись с удовольствием!</td>
-					</tr>
-					<tr>
-						<td></td>
-						<td>
-							<!--<form action="/signin" method="post">
-								<button type="submit" style="background-image:none; background-color:transparent;">
-									<img src="../images/start-game-button-clear.png"/>
-								</button>
-								<input type="submit" value="Войти"/>
-							</form>-->
-							<a th:href="${status}">
-								<img src="../images/start-game-button-clear.png" width="100%"/>
-							</a>
-						</td>
+						<td>Первый и единственный образовательный интернет  портал  в России для учащихся начальных классов!</td>
+						<td>В нашем сервисе уже зарегистрировано более <span th:text="${score_users}"><b>1000</b></span> пользователей!</td>
+						<td>Мы реализуем совершенно новый подход к обучению, прививая интерес и тягу к знаниям благодаря красочным и захватывающих внимание обучающего историям!</td>
 					</tr>
 				</table>
+                <p align="center" ><a href="authorization.html" th:href="${status}" >
+								<img src="../images/start-game-button-clear.png" width="30%" />
+                    </a></p>
 			</div>
-			<footer>
-				
+		</div>
+		
+        <footer>
+				<p align="center">The Kingdom Online Corp 2018</p>
 			</footer>
-		</div>
-		<div id="login">
-			<table align="center" style="padding:20%;">
-				<tbody><tr>
-					<td>
-						<form class="content" action="/signin" method="POST">
-							<p>Email: <input name="email" required="required" autofocus="autofocus" type="email" /></p>
-							<p>Пароль: <input name="password" required="required" type="password" /></p>
-							<p><button type="submit">Войти</button></p>
-						</form>
-						<form action="/registration" method="post">
-							<p><button type="submit" formaction="/registration">Регистрация</button></p>
-						</form>
-					</td>
-				</tr>
-				</tbody>
-			</table>
-		</div>
 	</body>
 </html>
